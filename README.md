@@ -14,6 +14,7 @@ Given a binary string (e.g., `"0110"`) and a threshold integer `N` (e.g., `5`), 
 3. Identifies **unique primes** below `N`
 4. Formats the output based on how many primes were found
 5. Cannot use any external libraries
+6. Cannot use the miller-rabin method to find primes
 
 ---
 
@@ -22,18 +23,6 @@ Given a binary string (e.g., `"0110"`) and a threshold integer `N` (e.g., `5`), 
 - **If fewer than 6 prime numbers** are found: show *all* primes in ascending order  
 - **If 6 or more primes** are found: show the **first 3**, **last 3**, and a count summary  
 - Example: `2 3 5 ... 89 97 101 (Total: 45 primes)`
-
----
-
-## 🧩 Project Structure
-
-```
-├── basicA.py         # Naive O(n³) brute-force implementation
-├── main.py           # Optimized solution with caching and sectioning
-├── draft3.py         # Experimental implementations and optimization trials
-├── testModules.py    # Unit tests using Python’s built-in unittest module
-└── README.md
-```
 
 ---
 
@@ -52,8 +41,10 @@ A refined and scalable version:
 - **Section-based chunking** of input for parallel-ready logic
 - Optimized binary-to-decimal conversion
 
-### 🧪 Drafts & Experiments (`draft3.py`)
+### 🧪 Drafts & Experiments (`draft3.py` and `unrestricted.py`)
 Contains older versions and exploratory strategies for optimization.
+
+- for unrestricted you will need numpy - it's the unrestricted version with miller rabin and numpy (external library)
 
 ---
 
